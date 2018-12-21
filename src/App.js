@@ -11,8 +11,8 @@ import WeatherForecast from './WeatherForecast';
 const APP_ID = '791fab78';
 const APP_KEY = '7cf16343a0795614ebe6eee81846b72c';
 const RESORT_ID = '54883819'; //Pyhä
-const SNOWREPORT = `http://api.weatherunlocked.com/api/snowreport/${RESORT_ID}?app_id=${APP_ID}&app_key=${APP_KEY}`;
-const RESORTFORECAST = `http://api.weatherunlocked.com/api/resortforecast/${RESORT_ID}?app_id=${APP_ID}&app_key=${APP_KEY}`;
+const SNOWREPORT = `https://api.weatherunlocked.com/api/snowreport/${RESORT_ID}?app_id=${APP_ID}&app_key=${APP_KEY}`;
+const RESORTFORECAST = `https://api.weatherunlocked.com/api/resortforecast/${RESORT_ID}?app_id=${APP_ID}&app_key=${APP_KEY}`;
 
 
 class App extends Component {
