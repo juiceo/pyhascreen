@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/pyhascreen/static/js/runtime~main.8bb6c8fa.js"
   },
   {
-    "revision": "c578c90500369715ac14",
-    "url": "/pyhascreen/static/js/main.c578c905.chunk.js"
+    "revision": "7656e259abf95a461db2",
+    "url": "/pyhascreen/static/js/main.7656e259.chunk.js"
   },
   {
     "revision": "e09c6691b3de2f80e710",
     "url": "/pyhascreen/static/js/1.e09c6691.chunk.js"
   },
   {
-    "revision": "c578c90500369715ac14",
-    "url": "/pyhascreen/static/css/main.f8f59209.chunk.css"
+    "revision": "7656e259abf95a461db2",
+    "url": "/pyhascreen/static/css/main.d0ba083d.chunk.css"
   },
   {
-    "revision": "2ab9e0cb4b266a9df643741ef5f25a8d",
+    "revision": "b10cb84aee2d2f7fd5e7b375f9258737",
     "url": "/pyhascreen/index.html"
   }
 ];
