@@ -1,32 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #475167;
+}
+
+.App--Content {
+  padding: 30px;
+  overflow: hidden;
+}
+
+.App--Loading {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App--Loading i {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App--Error {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App--Error i {
+  color: white;
+}
+
+.App--Error h3 {
+  color: white;
+  text-align: center;
+}
+
+.App--Error button {
+  background: white;
+  color: #475167;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.App--Error button:hover {
+  opacity: 1;
+}
+
+.Slider *:focus {
+  outline: none;
+}
+
+.Slide--Content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Slide--Content_inner {
+  width: 800px;
 }
