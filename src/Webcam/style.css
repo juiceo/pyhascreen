@@ -11,9 +11,15 @@
 	color: white;
 }
 
-.Webcam--Cam {
+.Webcam--CamWrapper {
 	flex: 1;
-	object-fit: contain;
-	object-position: top;
+	justify-content: center;
+	align-items: center;
+}
+
+.Webcam--Cam {
 	width: 100%;
+	object-fit: contain;
+	object-position: center;
+	max-height: 600px;
 }

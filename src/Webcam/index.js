@@ -16,12 +16,14 @@ class Webcam extends Component {
 		return (
 			<div className="Webcam">
 				<h3 className="Webcam--Title">WEBCAM</h3>
-				<img
-					className="Webcam--Cam"
-					data-src={this.props.url + '?' + this.props.updated}
-					alt={this.props.url + '?' + this.props.updated}
-					src={this.props.url + '?' + this.props.updated}
-				/>
+				<div className="Webcam--CamWrapper">
+					<img
+						className="Webcam--Cam"
+						data-src={this.props.url + '?' + this.props.updated}
+						alt={this.props.url + '?' + this.props.updated}
+						src={this.props.url + '?' + this.props.updated}
+					/>
+				</div>
 			</div >
 		);
 	}
