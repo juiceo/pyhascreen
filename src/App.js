@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import Promise from 'bluebird';
 import Slider from 'react-slick';
+import { connect } from 'react-redux';
+import moment from 'moment-timezone';
 import logo from './logo.svg';
 import './App.css';
 
 import SnowReport from './SnowReport';
 import SnowForecast from './SnowForecast';
 import WeatherForecast from './WeatherForecast';
+import Webcam from './Webcam';
 
-const APP_ID = '791fab78';
-const APP_KEY = '7cf16343a0795614ebe6eee81846b72c';
-const RESORT_ID = '54883819'; //Pyhä
-const SNOWREPORT = `https://api.weatherunlocked.com/api/snowreport/${RESORT_ID}?app_id=${APP_ID}&app_key=${APP_KEY}`;
-const RESORTFORECAST = `https://api.weatherunlocked.com/api/resortforecast/${RESORT_ID}?app_id=${APP_ID}&app_key=${APP_KEY}`;
-
+import * as Actions from './redux/actions';
 
 class App extends Component {
 
@@ -23,8 +21,6 @@ class App extends Component {
     this.state = {
       loading: false,
       error: true,
-      snowReport: null,
-      forecast: null,
     };
 
     this.updateData = this.updateData.bind(this);
@@ -32,6 +28,10 @@ class App extends Component {
 
   componentDidMount() {
     this.updateData();
+
+    setTimeout(function () {
+      this.updateData();
+    }.bind(this), 1000 * 60 * 5);
   }
 
   delay(ms = 1000) {
@@ -42,16 +42,6 @@ class App extends Component {
     })
   }
 
-  getSnowReport() {
-    return fetch(SNOWREPORT)
-      .then(res => res.json());
-  }
-
-  getForecast() {
-    return fetch(RESORTFORECAST)
-      .then(res => res.json());
-  }
-
   updateData() {
 
     this.setState({
@@ -59,14 +49,12 @@ class App extends Component {
       error: false,
     }, () => {
       Promise.all([
-        this.getSnowReport(),
-        this.getForecast(),
+        this.props.updateSnowReport(),
+        this.props.updateForecast(),
         this.delay(1000),
       ]).then(data => {
         this.setState({
           loading: false,
-          snowReport: data[0],
-          forecast: data[1]
         });
 
       }).catch(err => {
@@ -81,9 +69,9 @@ class App extends Component {
 
   render() {
 
-    const { forecast, snowReport } = this.state;
+    const { forecast, snowReport } = this.props;
 
-    if (this.state.loading && (!this.state.forecast || !this.state.snowReport)) {
+    if (this.state.loading && (!forecast || !snowReport)) {
       return (
         <div className="App">
           <div className="App--Loading">
@@ -113,12 +101,16 @@ class App extends Component {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 5000,
-      centerMode: true,
+      centerMode: false,
       arrows: false,
     };
 
     return (
       <div className="App">
+        <div className="App--Header">
+          <img className="App--Header_logo" src={require('./assets/pyha.jpg')} />
+          <span className="App--Header_updated"><strong>Updated: </strong>{moment(this.props.updated).fromNow()}</span>
+        </div>
         <div className="App--Content">
           <Slider {...settings} className="Slider">
             <div className="Slide">
@@ -142,6 +134,13 @@ class App extends Component {
                 </div>
               </div>
             </div>
+            <div className="Slide">
+              <div className="Slide--Content">
+                <div className="Slide--Content_inner">
+                  <Webcam url="http://www3.ruka.fi/webcampyha1.jpg" updated={this.props.updated} />
+                </div>
+              </div>
+            </div>
           </Slider>
         </div>
       </div>
@@ -149,4 +148,15 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  snowReport: state.data.snowReport,
+  forecast: state.data.forecast,
+  updated: Date.now(),
+});
+
+const mapDispatchToProps = dispatch => ({
+  updateSnowReport: () => dispatch(Actions.updateSnowReport()),
+  updateForecast: () => dispatch(Actions.updateForecast()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

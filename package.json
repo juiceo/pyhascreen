@@ -9,8 +9,12 @@
     "moment-timezone": "^0.5.23",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
     "react-scripts": "2.1.1",
     "react-slick": "^0.23.2",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

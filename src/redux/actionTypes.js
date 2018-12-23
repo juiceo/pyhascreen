@@ -1,0 +1,2 @@
+export const SET_SNOW_REPORT = 'SET_SNOW_REPORT';
+export const SET_FORECAST = 'SET_FORECAST';

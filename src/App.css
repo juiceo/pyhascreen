@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans';
 }
 
 body, html, #root {
   height: 100%;
+  min-width: 800px;
 }
 
 .App {
@@ -18,6 +20,7 @@ body, html, #root {
 .App--Content {
   padding: 30px;
   overflow: hidden;
+  flex: 1;
 }
 
 .App--Loading {
@@ -65,8 +68,18 @@ body, html, #root {
   opacity: 1;
 }
 
+.Slider {
+  height: 100%;
+  width: 100%;
+}
+
 .Slider *:focus {
   outline: none;
+}
+
+.Slide {
+  width: 100%;
+  height: 100%;
 }
 
 .Slide--Content {
@@ -78,5 +91,26 @@ body, html, #root {
 }
 
 .Slide--Content_inner {
-  width: 800px;
+  width: 100%;
+}
+
+.App--Header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.App--Header_logo {
+  height: 100%;
+}
+
+.App--Header_updated {
+  color: white;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.App--Header_updated strong {
+  text-transform: uppercase;
 }

@@ -4,8 +4,8 @@ import _ from 'lodash';
 import moment from 'moment-timezone';
 import './style.css';
 
-const PEAK_HEIGHT = '380m';
-const VALLEY_HEIGHT = '170m';
+const PEAK_HEIGHT = '500m';
+const VALLEY_HEIGHT = '280m';
 
 class SnowReport extends Component {
 
@@ -21,7 +21,7 @@ class SnowReport extends Component {
 		return (
 			<div className="SnowReport">
 				<div className="SnowReport--Current">
-					<h3 className="SnowReport--Current_Title">SNOW DEPTH</h3>
+					<h3 className="SnowReport--Current_Title">SNOW REPORT</h3>
 					<div className="SnowReport--Current_Content">
 						<div className="SnowReport--Current_section align-left">
 							<span className="SnowReport--Current_section-label"><strong>PEAK</strong> {PEAK_HEIGHT}</span>
@@ -29,7 +29,7 @@ class SnowReport extends Component {
 						</div>
 						<i className="SnowReport--Current_icon fas fa-mountain fa-5x"></i>
 						<div className="SnowReport--Current_section align-right">
-							<span className="SnowReport--Current_section-label"><strong>VALLEY</strong> {VALLEY_HEIGHT}</span>
+							<span className="SnowReport--Current_section-label"><strong>BASE</strong> {VALLEY_HEIGHT}</span>
 							<span className="SnowReport--Current_section-value">{snowReport.lowersnow_cm}cm</span>
 						</div>
 					</div>

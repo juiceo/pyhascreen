@@ -60,10 +60,15 @@ class SnowForecast extends Component {
 
 		return _.map(dates, (date) => {
 			const forecast = this.getSnowForecast(date.date);
+			let className = "SnowReport--Forecast_Row";
+			if (forecast >= 5) {
+				className += ' powder-alert';
+			}
 			return (
-				<div className="SnowReport--Forecast_Row">
+				<div className={className}>
 					<div className="SnowReport--Forecast_Row-label">
 						<span><strong>{date.label}</strong>{date.dateFormatted}</span>
+						<span className="SnowReport--PowderAlert">POWDER ALERT!</span>
 					</div>
 					<div className="SnowReport--Forecast_Row-value">
 						<span>+ {forecast}cm</span>

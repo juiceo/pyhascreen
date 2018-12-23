@@ -1,6 +1,5 @@
 .WeatherForecast {
-	height: 100%;
-	width: 100%;
+flex: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -11,17 +10,76 @@
 	color: white;
 }
 
-.WeatherForecast--Header,
-.WeatherForecast--Row {
+.WeatherForecast--Content {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	align-items: stretch
+}
+
+.WeatherForecast--Block {
+	display: flex;
+	flex: 1;
+	background: white;
+	flex-direction: column;
+	margin: 5px;
+}
+
+.WeatherForecast--Block_day {
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	background: #ececec;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.WeatherForecast--Block_main {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.WeatherForecast--Block_main img {
+	width: 50px;
+}
+
+.WeatherForecast--Block_main span  {
+	color: black;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.WeatherForecast--Block_wind {
 	display: flex;
 	flex-direction: row;
-}
-
-.WeatherForecast--Column {
+	justify-content: space-between;
 	padding: 10px;
-	width: 100px;
 }
 
-.WeatherForecast--Column.flex {
-	flex: 1;
+.WeatherForecast--Block_cloud {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.WeatherForecast--Table {
+	padding: 10px;
+	background: #ececec;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+.WeatherForecast--Table td {
+	text-align: center;
+	font-size: 13px;
+	padding: 5px;
+}
+
+.WeatherForecast--Table th {
+	padding: 5px;
+	font-size: 13px;
 }

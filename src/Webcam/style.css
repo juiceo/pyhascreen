@@ -1,0 +1,19 @@
+.Webcam {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.Webcam--Title {
+	text-align: center;
+	color: white;
+}
+
+.Webcam--Cam {
+	flex: 1;
+	object-fit: contain;
+	object-position: top;
+	width: 100%;
+}

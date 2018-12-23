@@ -10,6 +10,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+	padding: 0 15%;
 }
 
 .SnowReport--Forecast_Title {
@@ -22,20 +23,60 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding: 20px;
+	padding: 10px;
+	border: 10px solid white;
+	background: white;
+	margin-top: 10px;
+	position: relative;
+}
+
+.SnowReport--PowderAlert {
+	margin-left: 10px;
+	color: red;
+	font-weight: bold;
+	display: none;
+	animation: blink 1s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.SnowReport--Forecast_Row.powder-alert .SnowReport--PowderAlert {
+	display: initial;
+}
+
+
+.SnowReport--Forecast_Row.powder-alert {
+	border: 10px solid red;
 }
 
 .SnowReport--Forecast_Row-label {
 	color: white;
 	font-size: 18px;
 	text-transform: uppercase;
+	color: #475167;
 }
 
 .SnowReport--Forecast_Row-label strong {
 	margin-right: 5px;
+	color: #475167;
 }
 
 .SnowReport--Forecast_Row-value {
 	color: white;
 	font-size: 28px;
+	color: #475167;
+	font-weight: bold;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
