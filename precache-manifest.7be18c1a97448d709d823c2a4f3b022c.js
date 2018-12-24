@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/pyhascreen/static/media/IsoSnowSwrsDay.db40b1f4.png"
   },
   {
-    "revision": "dfe54f146136bae9cbd0",
-    "url": "/pyhascreen/static/css/main.f6c3e4dc.chunk.css"
+    "revision": "76ece890a5b6e332c222",
+    "url": "/pyhascreen/static/css/main.d28634ca.chunk.css"
   },
   {
     "revision": "6496b3fbae9ee8515ec2",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/pyhascreen/static/media/IsoSleetSwrsDay.d9497230.png"
   },
   {
-    "revision": "dfe54f146136bae9cbd0",
-    "url": "/pyhascreen/static/js/main.dfe54f14.chunk.js"
+    "revision": "76ece890a5b6e332c222",
+    "url": "/pyhascreen/static/js/main.76ece890.chunk.js"
   },
   {
     "revision": "db40b1f434d0b6b755b51bcc5ad3e043",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/pyhascreen/static/media/pyha.d3832c1a.jpg"
   },
   {
-    "revision": "abad73cd373d10deac69e8ff7d4f0d74",
+    "revision": "62c31614e6eb0f2e0a91e8bbe815339f",
     "url": "/pyhascreen/index.html"
   }
 ];
