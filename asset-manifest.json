@@ -1,7 +1,7 @@
 {
   "main.css": "/pyhascreen/static/css/main.048f70f8.chunk.css",
-  "main.js": "/pyhascreen/static/js/main.ea2534fc.chunk.js",
-  "main.js.map": "/pyhascreen/static/js/main.ea2534fc.chunk.js.map",
+  "main.js": "/pyhascreen/static/js/main.5a5a6413.chunk.js",
+  "main.js.map": "/pyhascreen/static/js/main.5a5a6413.chunk.js.map",
   "static/js/1.3279356b.chunk.js": "/pyhascreen/static/js/1.3279356b.chunk.js",
   "static/js/1.3279356b.chunk.js.map": "/pyhascreen/static/js/1.3279356b.chunk.js.map",
   "runtime~main.js": "/pyhascreen/static/js/runtime~main.8bb6c8fa.js",
@@ -25,6 +25,6 @@
   "static/media/pyha.jpg": "/pyhascreen/static/media/pyha.d3832c1a.jpg",
   "static/css/main.048f70f8.chunk.css.map": "/pyhascreen/static/css/main.048f70f8.chunk.css.map",
   "index.html": "/pyhascreen/index.html",
-  "precache-manifest.ce309fcb274876dfd71f5cbdf08927b7.js": "/pyhascreen/precache-manifest.ce309fcb274876dfd71f5cbdf08927b7.js",
+  "precache-manifest.7dad248f6a59dec5d4cbbd6502636e61.js": "/pyhascreen/precache-manifest.7dad248f6a59dec5d4cbbd6502636e61.js",
   "service-worker.js": "/pyhascreen/service-worker.js"
 }

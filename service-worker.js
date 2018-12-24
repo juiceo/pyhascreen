@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/pyhascreen/precache-manifest.ce309fcb274876dfd71f5cbdf08927b7.js"
+  "/pyhascreen/precache-manifest.7dad248f6a59dec5d4cbbd6502636e61.js"
 );
 
 workbox.clientsClaim();
